@@ -6,14 +6,8 @@ namespace myapi.Controllers;
 [Route("[controller]")]
 public class CostPriceController : ControllerBase
 {
-    private readonly ILogger<CostPriceController> _logger;
 
-    public CostPriceController(ILogger<CostPriceController> logger)
-    {
-        _logger = logger;
-    }
-
-    [HttpGet(Name = "GetCostPrice")]
+    [HttpGet]
     public CostPrice Get()
     {
         return new CostPrice

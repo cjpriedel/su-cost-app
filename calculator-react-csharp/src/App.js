@@ -1,14 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import './constants'
-import { valuesFunction } from './constants';
 import { InputNumber } from 'antd';
-
-
-
-
-
-
+import 'antd/dist/antd.css';
 
 
 export default function App({ quantity }) {
@@ -47,8 +40,9 @@ export default function App({ quantity }) {
   }
 
   return (
-    <>
-      <div className="calctable">
+    <div className="body">
+      <h1 className="header">Cost Calculator Coding Exercise</h1>
+        <div className="calctable">
         <InputNumber className="inputbox" placeholder="Quantity" defaultValue={0} onChange={onChange} />
 
         <InputNumber className="inputbox" value={(values.costPlusTax).toFixed(2)} readOnly />
@@ -56,8 +50,8 @@ export default function App({ quantity }) {
         <InputNumber className="inputbox" value={(values.breakevenAmount).toFixed(2)} readOnly />
 
         <InputNumber className="inputbox" value={(values.totalPrice).toFixed(2)} readOnly />
-      </div>
-    </>
+        </div>
+    </div>
   )
 }
 
